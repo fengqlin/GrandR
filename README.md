@@ -39,6 +39,7 @@ library(patchwork)
 # Initialize a clean, standardized directory structure for a generic study
 GR_scaffold("Simulated_Study_2026", author = "Principal Investigator")
 
+
 # Note: In a real scenario, you would setwd() and source("init.R")
 # setwd("Simulated_Study_2026")
 # source("init.R")
