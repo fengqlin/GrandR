@@ -33,6 +33,7 @@ library(GrandR)
 library(tidyverse)
 library(patchwork)
 
+
 # ==============================================================================
 # 🏗️ STEP 1: Scaffold a Standard Research Workspace
 # ==============================================================================
@@ -109,6 +110,11 @@ final_result <- GR_run_recorder(
   asset_name = "Discovery_Cohort_V1",
   note = "Initial_Biomarker_Screen"
 )
+![Audit Report 1](报告1.png)
+![Audit Report 2](报告2.png)
+
+GR_view_indexer()  # View the visual timeline of all research runs
+![Audit Report 3](报告3.png)
 
 
 # ==============================================================================
@@ -120,3 +126,6 @@ final_result <- GR_run_recorder(
 # GR_view_vault()    # Inspect ingested Parquet data assets
 # GR_view_indexer()  # View the visual timeline of all research runs
 ```
+
+
+
