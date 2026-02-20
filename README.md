@@ -33,10 +33,9 @@ library(GrandR)
 library(tidyverse)
 library(patchwork)
 
-
-# ==============================================================================
+```
 # 🏗️ STEP 1: Scaffold a Standard Research Workspace
-# ==============================================================================
+```
 # Initialize a clean, standardized directory structure for a generic study
 GR_scaffold("Simulated_Study_2026", author = "Principal Investigator")
 
@@ -44,11 +43,9 @@ GR_scaffold("Simulated_Study_2026", author = "Principal Investigator")
 # Note: In a real scenario, you would setwd() and source("init.R")
 # setwd("Simulated_Study_2026")
 # source("init.R")
-
-
-# ==============================================================================
+```
 # 🎨 STEP 2: Configure Global Visual Identity (Palettes)
-# ==============================================================================
+```
 # Define isolated color themes for different analysis modules
 GR_pal_set(
   Control = "#94a3b8", Treated = "#ef4444", 
@@ -60,10 +57,9 @@ GR_pal_set(
   theme_id = "Risk_Profile"
 )
 
-
-# ==============================================================================
+```
 # 📦 STEP 3: Data Ingestion into the Vault (IO)
-# ==============================================================================
+```
 # Create mock multi-omics data (1000 features x 50 samples)
 mock_data <- data.frame(
   Sample_ID = paste0("S_", 1:50),
@@ -75,10 +71,9 @@ mock_data <- data.frame(
 # Ingest data into the high-speed Parquet vault
 GR_io_write(mock_data, asset_name = "Discovery_Cohort_V1")
 
-
-# ==============================================================================
+```
 # 🛡️ STEP 4: Record a Standard Analytical Task
-# ==============================================================================
+```
 # Define a generic analysis function
 analyze_biomarker_distribution <- function(asset_name) {
   
@@ -110,16 +105,17 @@ final_result <- GR_run_recorder(
   asset_name = "Discovery_Cohort_V1",
   note = "Initial_Biomarker_Screen"
 )
+```
 ![Audit Report 1](报告1.png)
 ![Audit Report 2](报告2.png)
-
+```
 GR_view_indexer()  # View the visual timeline of all research runs
+```
 ![Audit Report 3](报告3.png)
 
 
-# ==============================================================================
 # 🛰️ STEP 5: Visual Exploration of Assets & History
-# ==============================================================================
+```
 # At any time, you can invoke these to view your "Research OS" state:
 
 # GR_view_api()      # Explore all standardized function assets
